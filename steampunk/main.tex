@@ -1,0 +1,288 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[letterpaper,10pt,twoside,twocolumn,openany]{dndbook}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+\usepackage[english]{babel}
+%usepackage[italian]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage{hang}
+\usepackage{lipsum}
+\usepackage{listings}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+
+% Start document
+\begin{document}
+
+% Your content goes here
+
+% Comment this out if you're using the article class.
+\chapter{Chapter 1: The Train to Steelport}
+
+\section{Overview}
+
+The first part of the adventure covers the adventurers on their way to Steelport.  They are looking for an unknown treasure that is rumored to give a wish to anyone who can find it.  While the adventurers may not know each other when they boarded the train, they are forced to work together in order to make it to Steelport. A murder aboard the train begins with some of our characters as the prime suspects!
+ 
+\begin{quotebox}
+A steam whistle blows as the conductor signals that the train has boarded all its passengers. As the wheels screeched into motion, the passengers aboard jolted in their seats as the engine chugged to life. 
+\end{quotebox}
+
+\section{Inside the Boxcar}
+The story begins with the adventurers sharing the same box car on the train. Ask them to introduce one another and perhaps engage in some small talk.  This can also be a time to describe the rest of the train.
+
+\begin{quotebox}
+The scratched, faded wood of the train car's walls creak as the wheels rhythmically rattle on the track.  The trees of Neverwinter become sparse as the train distances itself from the rural city.
+\end{quotebox}
+
+\section{Exploring the Train}
+The train consists of multiple boxcars that the players can explore.  They first begin in the passengers' boxcar.  Furthermore, the train has multiple passengers that the players can interact with. The cars and passengers in each car, in order, are as follows:
+
+\begin{dndtable}[l l l]
+  \textbf{Train Car}  & \textbf{Passenger}  & \textbf{Identity} \\
+  Locomotive          & Casey Jones         & Engineer \\
+  Coal Car            & \textit{Nobody}     & \\
+  Dining Car          & Dantonio Rivera     & Chef \\
+  Passenger Car       & Rasheed Jules       & Bard  \\
+                      & Cassandra Troy      & Cleric \\
+                      & Drake Kahn          & Fence \\
+  Lounge Car          & Bartholomew Higgins & High-Roller \\
+                      & Helga Boneskull     & Wrestler \\
+                      & Jane Doe            & Unknown \\
+  Caboose             & Jenkins Malone      & Steward
+\end{dndtable}
+
+\subsection{Meeting Passengers}
+Aboard the train are many other passengers that the adventurers can meet. Here is a brief description of each character:
+
+\subsubsection{Casey Jones \textit{The Engineer}}
+Casey Jones is the engineer running the train.  It is unlikely that the players will meet her face-to-face, since she is barricaded in the locomotive.  She is an extremely anxious dwarf who fears wide-open spaces. As a result, she stays boxed up in the locomotive while the train is moving.
+
+\subsubsection{Dantonio Rivera \textit{The Chef}}
+This chef loves making improvisations in the kitchen.  He is an always-smiling, broad-shouldered human who is missing two fingers on his left hand from a cooking accident.  He is happy to make food to order for any of the passengers, despite the limited supply of food in the kitchen.
+
+\subsubsection{Bartholomew Higgins \textit{The High-Roller}}
+Higgins is a crude gnome travelling to Steelport to visit some of their high-end brothels.  He is a compulsive liar and surpsingly rich.  He feels that he is of higher social stature than anyone else on the train and thus will not treat them very nicely.
+
+\subsubsection{Helga Boneskull \textit{The Wrestler}}
+Hailing from overseas, Helga is a half-orc travelling to Steelport as an up-and-coming wrestler.  She is entered in a wrestling tournament and believes she has a solid shot at winning. Despite her intimidating stature, she is incredibly sweet and will treat anyone with equal respect.
+
+\subsubsection{Rasheed Jules \textit{The Bard}}
+Rasheed is a half-elf bard whose nosy tendencies get him into trouble.  He is currently returning from a six-month trip in Neverwinter spent lying low from the mob bosses in Steelport.  He is extremely suspicious of anyone who attempts to get too friendly with him aboard the train.
+
+\subsubsection{Cassandra Troy \textit{The Cleric}}
+This cleric believes her constant nose bleeds indicate when an evil presence is active. This is false, but sometimes chance tends to work in her favor. Cassandra is a slender, sentimental halfling who is travelling to Steelport to put her skills to use in the city.
+ 
+\subsubsection{Drake Kahn \textit{The Fence}}
+Alcoholics are common, but functioning alcoholics are a different sort.  Kahn is a surprisingly respectful, mild-mannered dragonborn, even when drunk.  He is secretly a fence for one of the families in the Steelport mob and will trade knowledge for booze.
+
+\subsubsection{Charlene Francios \textit{The Warlock}}
+
+
+\begin{commentbox}{This Is a Comment Box!}
+  A \lstinline!commentbox! is a box for minimal highlighting of text. It lacks the ornamentation of \lstinline!paperbox!, but it can handle being broken over a column.
+\end{commentbox}
+
+\subtitlesection{Weapon, +1, +2, or +3}
+{Weapon (any), uncommon (+1), rare (+2), or very rare (+3)}
+
+\lipsum[3]
+
+\begin{paperbox}[float=!t]{Behold, the Paperbox!}
+  The \lstinline!paperbox! is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+\end{paperbox}
+
+% For more columns, you can say \begin{dndtable}[your options here].
+% For instance, if you wanted three columns, you could say
+% \begin{dndtable}[XXX]. The usual host of tabular parameters are
+% available as well.
+\header{Nice table}
+\begin{dndtable}
+   	\textbf{Table head}  & \textbf{Table head} \\
+   	Some value  & Some value \\
+   	Some value  & Some value \\
+   	Some value  & Some value
+\end{dndtable}
+
+% You can optionally not include the background by saying
+% begin{monsterboxnobg}
+\begin{monsterbox}{Monster Foo}
+  \begin{hangingpar}
+    \textit{Small metasyntactic variable (goblinoid), neutral evil}
+  \end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{3d8 + 3},
+	speed      = 50 ft
+	]
+	\dndline%
+	\stats[
+    STR = \stat{12}, % This stat command will autocomplete the modifier for you
+    DEX = \stat{7}
+	]
+	\dndline%
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {Common Lisp, Erlang},
+	]
+	\dndline%
+	\begin{monsteraction}[Monster-super-powers]
+		This Monster has some serious superpowers!
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Generate text]
+		This one can generate tremendous amounts of text! Though only when it wants to.
+	\end{monsteraction}
+
+	\begin{monsteraction}[More actions]
+    See, here he goes again! Yet more text.
+	\end{monsteraction}
+\end{monsterbox}
+
+\section{Spells}
+
+\begin{spell}
+	{Beautiful Typesetting}
+	{4th-level illusion}
+	{1 action}
+	{5 feet}
+	{S, M (ink and parchment, which the spell consumes)}
+	{Until dispelled}
+	You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+
+	While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+\end{spell}
+
+\lipsum[2]
+
+\section{Colors}
+
+This package provides several global color variables to style \lstinline!commentbox!, \lstinline!quotebox!, \lstinline!paperbox!, and \lstinline!dndtable! environments.
+
+\begin{dndtable}[lX]
+  \textbf{Color}         & \textbf{Description} \\
+  \lstinline!commentboxcolor! & Controls \lstinline!commentbox! background. \\
+  \lstinline!paperboxcolor!   & Controls \lstinline!paperbox! background. \\
+  \lstinline!quoteboxcolor!   & Controls \lstinline!quotebox! background. \\
+  \lstinline!tablecolor!      & Controls background of even \lstinline!dndtable! rows. \\
+\end{dndtable}
+
+See Table~\ref{tab:colors} for a list of accent colors that match the core books.
+
+\begin{table*}
+  \begin{dndtable}[XX]
+    \textbf{Color}                            & \textbf{Description} \\
+    \lstinline!PhbLightGreen!                      & Light green used in PHB Part 1 \\
+    \lstinline!PhbLightCyan!                       & Light cyan used in PHB Part 2 \\
+    \lstinline!PhbMauve!                           & Pale purple used in PHB Part 3 \\
+    \lstinline!PhbTan!                             & Light brown used in PHB appendix \\
+    \lstinline!DmgLavender!                        & Pale purple used in DMG Part 1 \\
+    \lstinline!DmgCoral!                           & Orange-pink used in DMG Part 2 \\
+    \lstinline!DmgSlateGray! (\lstinline!DmgSlateGrey!) & Blue-gray used in PHB Part 3 \\
+    \lstinline!DmgLilac!                           & Purple-gray used in DMG appendix \\
+  \end{dndtable}
+  \caption{Colors supported by this package}%
+  \label{tab:colors}
+\end{table*}
+
+\begin{itemize}
+  \item Use \lstinline!\setthemecolor[<color>]! to set \lstinline!themecolor!, \lstinline!commentcolor!, \lstinline!paperboxcolor!, and \lstinline!tablecolor! to a specific color.
+  \item Calling \lstinline!\setthemecolor! without an argument sets those colors to the current \lstinline!themecolor!.
+  \item \lstinline!commentbox!, \lstinline!dndtable!, \lstinline!paperbox!, and \lstinline!quoteboxcolor! also accept an optional color argument to set the color for a single instance.
+\end{itemize}
+
+\subsection{Examples}
+
+\subsubsection{Using \lstinline!themecolor!}
+
+\begin{lstlisting}
+\setthemecolor[PhbMauve]
+
+\begin{paperbox}{Example}
+  \lipsum[2]
+\end{paperbox}
+
+\setthemecolor[PhbLightCyan]
+
+\header{Example}
+\begin{dndtable}[cX]
+  \textbf{d8} & \textbf{Item} \\
+  1           & Small wooden button \\
+  2           & Red feather \\
+  3           & Human tooth \\
+  4           & Vial of green liquid \\
+  6           & Tasty biscuit \\
+  7           & Broken axe handle \\
+  8           & Tarnished silver locket \\
+\end{dndtable}
+\end{lstlisting}
+
+\begingroup
+\setthemecolor[PhbMauve]
+
+\begin{paperbox}{Example}
+  \lipsum[2]
+\end{paperbox}
+
+\setthemecolor[PhbLightCyan]
+
+\header{Example}
+\begin{dndtable}[cX]
+  \textbf{d8} & \textbf{Item} \\
+  1           & Small wooden button \\
+  2           & Red feather \\
+  3           & Human tooth \\
+  4           & Vial of green liquid \\
+  6           & Tasty biscuit \\
+  7           & Broken axe handle \\
+  8           & Tarnished silver locket \\
+\end{dndtable}
+\endgroup
+
+\subsubsection{Using element color arguments}
+
+\begin{lstlisting}
+\begin{dndtable}[cX][DmgCoral]
+  \textbf{d8} & \textbf{Item} \\
+  1           & Small wooden button \\
+  2           & Red feather \\
+  3           & Human tooth \\
+  4           & Vial of green liquid \\
+  6           & Tasty biscuit \\
+  7           & Broken axe handle \\
+  8           & Tarnished silver locket \\
+\end{dndtable}
+\end{lstlisting}
+
+\begin{dndtable}[cX][DmgCoral]
+  \textbf{d8} & \textbf{Item} \\
+  1           & Small wooden button \\
+  2           & Red feather \\
+  3           & Human tooth \\
+  4           & Vial of green liquid \\
+  6           & Tasty biscuit \\
+  7           & Broken axe handle \\
+  8           & Tarnished silver locket \\
+\end{dndtable}
+
+% End document
+\end{document}
